@@ -1,0 +1,215 @@
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 7.8vh;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.63);
+    z-index: 99;
+    background-color: $color-white;
+    transition: .2s ease-in-out;
+}
+
+.header:hover > .header-border {
+    opacity: 1;
+}
+
+.header-active {
+    height: 6.8vh;
+}
+
+.header-content {
+    background-color: $color-white;
+    position: relative;
+    z-index: 3;
+    height: calc(100% - 3px);
+}
+
+.header-border {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 500ms;
+    background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y), 
+    $color-main, 
+    transparent 40%
+    ); 
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo {
+    z-index: 99;
+}
+
+.navbar-anchors {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+    font-weight: bold;
+    padding-top: 4px;
+}
+
+.navbar-anchors a {
+    transition: .2s ease-in;
+}
+
+.navbar-anchors a:hover {
+    color: $color-main;
+}
+
+/* Hamburger-bars based on W3schoole one's */
+.bars {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.bars div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.bar-active .bar1 {
+    transform: translate(0, 9px) rotate(-45deg);
+}
+
+.bar-active .bar2 {
+    opacity: 0;
+}
+
+.bar-active .bar3 {
+    transform: translate(0, -9px) rotate(45deg);
+}
+
+/* Menu */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120vh;
+    background-color: $color-white;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+    transition: .3s ease-in;
+
+    .sidebar-anchors {
+        position: absolute;
+        top: 7.5vh;
+        right: 6vw;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        gap: 1.3rem;
+        flex-direction: column;
+        padding-bottom: 1.8rem;
+
+        a {
+            font-weight: bold;
+            font-size: 2rem;
+            animation: sidebarAnchors 1.5s;
+
+            &:nth-child(2) {
+                animation-duration: 1.8s;
+            }
+
+            &:nth-child(3) {
+                animation-duration: 2.1s;
+            }
+
+            &:nth-child(4) {
+                animation-duration: 2.4s;
+            }
+        }
+
+        &::after {
+            content: "";
+            width: 60vw;
+            height: 2px;
+            background-color: $color-main;
+            position: absolute;
+            top: 18.5rem;
+            right: 0;
+            animation: sidebarAnchors 2.7s;
+        }
+    }
+
+    .sidebar-info {
+        width: 90%;
+        position: absolute;
+        bottom: 20vh;
+        right: 6vw;
+        text-align: end;
+        animation: sidebarInfo 1s;
+    }
+}
+
+.display-menu {
+    display: flex!important;
+    animation: displayMenu .5s;
+}
+
+@keyframes displayMenu {
+    from {
+        translate: 0 -10%;
+        opacity: 0;
+    }
+    to {
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+@keyframes sidebarAnchors {
+    from {
+        translate: -5rem 0;
+        opacity: 0;
+    }
+    to {
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+@keyframes sidebarInfo {
+    from {
+        translate: 0 -15rem;
+        opacity: 0;
+    }
+    to {
+        translate: 0 0;
+        opacity: 1;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+    .header {
+        height: 8.4vh;
+    }
+    .header-active {
+        height: 7.6vh;
+    }
+}

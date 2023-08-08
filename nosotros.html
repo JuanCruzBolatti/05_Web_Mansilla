@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafica y Flexibles</title>
+    <!-- LeafletJS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin=""/>
+    <!-- Normalize -->
+    <link rel="stylesheet" href="style/normalize.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <!-- Sidebar -->
+            <div class="sidebar" style="display: none;" id="sidebar">
+                <div class="sidebar-anchors">
+                    <a href="/servicios.html">Servicios</a>
+                    <a href="/nosotros.html">Sobre Nosotros</a>
+                    <a href="/nosotros.html">Clientes</a>
+                    <a href="/contacto.html">Contactanos</a>
+                </div>
+                <div class="sidebar-info">
+                    <p>Opcion de texto personalizado para la utilizacion de opciones de contacto, o informacion adicional. Ya sea como llegar al lugar o numeros de telefono u horarios de atencion.</p>
+                </div>   
+            </div>
+
+            <!-- Navbar -->
+            <div class="navbar container">
+                <a href="/" class="logo">GyF</a>
+                <nav class="navbar-anchors display-pc">
+                    <a href="/servicios.html">Servicios</a>
+                    <a href="/nosotros.html">Sobre Nosotros</a>
+                    <a href="/nosotros.html">Clientes</a>
+                    <a href="/contacto.html">Contactanos</a>
+                </nav>
+
+                <div class="display-mobile bars" onclick="changeBars(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-border"></div>
+    </header>
+
+    <div class="hero sub-hero">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+        </div>
+    </div>
+
+    <section class="home-about container">
+        <div>
+            <p class="subtitle">Sobre Nosotros</p>  
+            <p class="ha-frase">40 Años brindando la mejor calidad de nuestros servicios</p>
+        </div>
+        <p class="ha-text">Somos una empresa familiar que desde hace medio siglo desarrollamos un producto de excelente calidad, manteniendo los mas altos estandares de la industria. Hacemos impresiones graficas y desarrollamos todo tipo de flexibles, como para esto, o para esto otro, o para lo ultimo y mas importante, lo ultimo.</p>  
+    </section>
+
+    <section class="home-about home-about-reverse container" id="secondAboutSection">
+        <div>
+            <p class="subtitle">Sobre Nosotros</p>  
+            <p class="ha-frase">40 Años brindando la mejor calidad de nuestros servicios</p>
+        </div>
+        <p class="ha-text">Somos una empresa familiar que desde hace medio siglo desarrollamos un producto de excelente calidad, manteniendo los mas altos estandares de la industria. Hacemos impresiones graficas y desarrollamos todo tipo de flexibles, como para esto, o para esto otro, o para lo ultimo y mas importante, lo ultimo.</p>  
+    </section>
+
+    <section class="about-midsection container">
+        <h4>Sobre Nosotros</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus quaerat, deserunt vitae necessitatibus sequi distinctio, nihil qui, illo facere quasi asperiores reprehenderit magnam? Saepe aliquid quam, officia culpa molestias tempora delectus? Natus error eligendi unde repudiandae molestiae modi aliquid accusantium.</p>
+    </section>
+
+    <section class="about-client">
+        <h4>Nuestros Clientes</h4>
+        <div class="about-client-pictures">
+            <div><img src="./style/img/logo-Ejemplo.png" alt=""></div>
+            <div><img src="./style/img/logo-Ejemplo.png" alt=""></div>
+            <div><img src="./style/img/logo-Ejemplo.png" alt=""></div>
+            <div><img src="./style/img/logo-Ejemplo.png" alt=""></div>
+            <div><img src="./style/img/logo-Ejemplo.png" alt=""></div>
+            <div><img src="./style/img/logo-Ejemplo.png" alt=""></div>
+            <div><img src="./style/img/logo-Ejemplo.png" alt=""></div>
+            <div><img src="./style/img/logo-Ejemplo.png" alt=""></div>
+            <div><img src="./style/img/logo-Ejemplo.png" alt=""></div>
+            <div><img src="./style/img/logo-Ejemplo.png" alt=""></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer container">
+            <div>
+                <a href="/" class="footer-title">Gráfica Y Flexibles SRL</a>
+                <p>Empresa de desarrollo de Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore odit quae sequi nemo cumque mollitia animi quia libero, nihil voluptatibus. Laboriosam ipsam nihil quibusdam nesciunt inventore ullam accusamus, rerum quis!</p>
+            </div>
+            <div>
+                <a href="/" class="footer-title">Servicios</a>
+                <a href="/">Grafica</a>
+                <a href="/">Flexibles</a>
+            </div>
+            <div>
+                <a href="/" class="footer-title">Contacto</a>
+                <a href="/">Mail</a>
+                <a href="/">Telefono</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LeafletJS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

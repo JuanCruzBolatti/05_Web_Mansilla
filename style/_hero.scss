@@ -1,0 +1,117 @@
+.hero {
+    margin-top: 6.8vh;
+    background: linear-gradient(to top, rgba(30, 30, 30, 0.05), rgba(0, 0, 0, 0.5)),
+    url(./img/Banner.png);
+    height: calc(76vh - 6.8vh);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+
+    div {
+        height: 80%;
+        padding-top: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+
+    h2 {
+        color: $color-white;
+        font-size: 5.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        width: 33%;
+        line-height: 1.2;
+        margin: 0;
+        transition: .18s ease-in;
+    }
+
+    p, a {
+        color: $color-white;
+        margin: 0;
+    }
+
+    p {
+        font-size: 2rem;
+        font-weight: 100;
+    }
+
+    a {
+        margin-top: 2rem;
+        margin-left: 1.5rem;
+        font-size: 2.2rem;
+        position: relative;
+        z-index: 1;
+        transition: .3s ease;
+
+        &::before {
+            content: "";
+            background-color: transparent;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            border: solid 3px $color-white;
+            width: 15rem;
+            height: 5rem;
+            position: absolute;
+            top: calc(50% - 2.7rem);
+            left: -1.4rem;
+            z-index: -1;
+            transition: .3s ease;
+        }
+
+        &:hover {
+            color: #000;
+
+            &::before {
+                background-color: $color-white;
+            }
+        }
+    }
+
+    &:hover > div > h2 {
+        font-size: 6rem;
+    }
+}
+
+
+@media only screen and (max-width: 1280px) {
+    .hero {
+        h2 {
+            font-size: 4.8rem;
+        }
+
+        &:hover > div > h2 {
+            font-size: 5rem;
+        }
+
+        p {
+            font-size: 1.8rem;
+        }
+
+        a {
+            font-size: 1.9rem;
+
+            &::before {
+                width: 13.3rem;
+                height: 4.4rem;
+                top: calc(50% - 2.3rem);
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .hero {
+        h2 {
+            font-size: 4rem;
+        }
+
+        &:hover > div > h2 {
+            font-size: 4.2rem;
+        }
+    }
+}

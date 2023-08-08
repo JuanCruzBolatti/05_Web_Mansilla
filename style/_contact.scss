@@ -1,0 +1,174 @@
+.contact {
+    margin-bottom: 5rem;
+
+    h4 {
+        text-align: center;
+        font-size: 4rem;
+        text-transform: uppercase;
+    }
+
+    .contact-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+
+        .contact-form {
+            padding: 6rem 5rem;
+            width: 45%;
+            border-radius: 2px;
+            background-color: $color-white;
+            box-shadow: 0px 0px 37px -4px rgba(0,0,0,0.24);
+
+            div {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+
+                input {
+                    width: 49%;
+                    padding: 1.2rem 2rem;
+                    margin: .5rem 0;
+                    display: inline-block;
+                    border: none;
+                    border-radius: 5px;
+                }
+
+                input[type=text] {
+                    background-color: #c5e2ff;
+                }
+
+                input[type=number], input[type=email] {
+                    background-color: #9dcefd;
+                }
+            }
+
+            textarea {
+                width: 100%;
+                margin: .5rem 0 0;
+                background-color: #72b8fd;
+                border: none;
+                border-radius: 5px;
+            }
+
+            input[type=submit] {
+                width: 20%;
+                min-width: 10rem;
+                padding: 1.2rem 2rem;
+                display: inline-block;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                background-color: $color-main;
+                color: $color-white;
+
+                &:hover {
+                    background-color: #3da4ff;
+                }
+            }
+        }
+
+        .contact-info {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            border-radius: 2px;
+            background-color: $color-white;
+            box-shadow: 0px 0px 37px -4px rgba(0,0,0,0.24);
+
+            #map {
+                width: 100%;
+                height: 20rem;
+            }
+
+            .contact-address {
+                width: 100%;
+                font-size: 1.5rem;
+                padding: .4rem 0;
+                background-color: $color-main;
+                color: $color-white;
+                text-align: center;
+            }
+
+            .contact-numbers {
+                display: flex;
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-direction: row;
+                text-align: center;
+
+                h5 {
+                    font-size: 1.8rem;
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+}
+
+::placeholder {
+    color: #01264a;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #01264a;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #01264a;
+}
+
+@media only screen and (max-width: 1440px) {
+    .contact {
+        .contact-content {
+            .contact-form {
+                width: 48%;
+
+                div {
+                    input {
+                        font-size: 1.4rem;
+                        padding-left: 1rem;
+                    }
+                }
+            }
+            .contact-info {
+                width: 48%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contact {
+        h4 {
+            margin: 4rem auto 1rem;
+        }
+
+        .contact-content {
+            flex-direction: column-reverse;
+
+            .contact-form {
+                width: 100%;
+                padding: 2rem;
+
+                div {
+                    flex-direction: column;
+
+                    input {
+                        width: 100%;
+                    }
+                }
+
+                input[type=submit] {
+                    width: 100%;
+                }
+            }
+            .contact-info {
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}
