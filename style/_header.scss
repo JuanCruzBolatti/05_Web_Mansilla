@@ -160,7 +160,7 @@
     .sidebar-info {
         width: 90%;
         position: absolute;
-        bottom: 20vh;
+        bottom: 30vh;
         right: 6vw;
         text-align: end;
         animation: sidebarInfo 1s;
@@ -202,14 +202,5 @@
     to {
         translate: 0 0;
         opacity: 1;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1280px) {
-    .header {
-        height: 8.4vh;
-    }
-    .header-active {
-        height: 7.6vh;
     }
 }
