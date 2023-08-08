@@ -1,35 +1,30 @@
 .home-clients {
     margin-top: 7rem;
-    width: 60%;
-    margin-left: 40%;
     margin-bottom: 6rem;
-    position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%);
-        width: 70vw;
-        height: 23vw;
-        right: 0;
-        top: -1rem;
-        background: rgb(0,136,255);
-        background: linear-gradient(90deg, rgba(0,136,255,1) 0%, rgba(67,84,236,1) 100%);
-        z-index: -1;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: linear-gradient(to top, rgba(30, 30, 30, 0.05), rgba(0, 0, 0, 0.5)),
+    url(./img/subbanner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
     a {
         color: $color-white;
+        text-align: center;
         font-size: 4rem;
         text-transform: uppercase;
         font-weight: bold;
-        margin-top: 6rem;
+        margin-top: 1rem;
     }
 
     .clients-pictures {
         display: grid;
         grid-template-columns: 8.6vw 8.6vw 8.6vw 26.875vw;
         gap: .4rem;
+        margin-bottom: 5rem;
 
         div {
             background-color: $color-white;
@@ -82,40 +77,38 @@
     }
 }
 
-@media only screen and (max-width: 1440px) {
-    .home-clients::before {
-        height: 25vw;
-    }
-}
-
 @media only screen and (max-width: 1280px) {
-    .home-clients::before {
-        height: 28vw;
-    }
-    .home-clients .clients-pictures .clients-pictures-text p {
-        font-size: 1.6rem;
+    .home-clients {
+        a {
+            font-size: 2.8rem;
+        }
+
+        .clients-pictures .clients-pictures-text p {
+            font-size: 1.6rem;
+        }
     }
 }
 
 @media only screen and (max-width: 768px) {
     .home-clients {
-        width: 100%;
-        margin-left: 0;
-
-        &::before {
-            width: 120vw;
-            height: 90vh;
-        }
+        background: linear-gradient(to top, rgba(30, 30, 30, 0.05), rgba(0, 0, 0, 0.5)),
+        url(./img/subbanner-celular.png);
 
         a {
             font-size: 2.3rem;
-            margin-left: calc(25% - 1rem);
-            text-align: center;
+            margin: 2.2rem auto 1.8rem;
         }
 
         .clients-pictures {
-            grid-template-columns: 40% 40%;
+            grid-template-columns: 35% 35%;
             justify-content: center;
+            margin-bottom: 3rem;
+
+            div {
+                img {
+                    width: 60%;
+                }
+            }
 
             .clients-pictures-text {
                 grid-area: auto;
