@@ -182,6 +182,7 @@ ul {
 }
 
 .navbar-anchors a {
+  font-size: 1.8rem;
   transition: 0.2s ease-in;
 }
 
@@ -189,6 +190,11 @@ ul {
   color: #0088ff;
 }
 
+@media only screen and (max-width: 1280px) {
+  .navbar-anchors a {
+    font-size: 1.6rem;
+  }
+}
 /* Hamburger-bars based on W3schoole one's */
 .bars {
   display: inline-block;
