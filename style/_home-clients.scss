@@ -11,18 +11,18 @@
         font-size: 4rem;
         text-transform: uppercase;
         font-weight: bold;
-        margin-top: 1rem;
+        margin: 1.5rem;
     }
 
     .clients-pictures {
         display: grid;
-        grid-template-columns: 15vw 15vw 15vw;
+        grid-template-columns: 22vw 22vw 22vw;
+        grid-template-rows: 13vw 13vw;
         gap: 3rem;
         margin-bottom: 5rem;
 
         div {
-            background-color: #000;
-            aspect-ratio: 1;
+            background-color: #f4f4f6;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -34,7 +34,7 @@
             }
 
             img {
-                width: 70%;
+                width: 50%;
             }
         }
 
@@ -74,7 +74,7 @@
 @media only screen and (max-width: 1280px) {
     .home-clients {
         a {
-            font-size: 2.8rem;
+            font-size: 3rem;
         }
 
         .clients-pictures .clients-pictures-text p {
@@ -85,16 +85,19 @@
 
 @media only screen and (max-width: 768px) {
     .home-clients {
-        background: linear-gradient(to top, rgba(30, 30, 30, 0.05), rgba(0, 0, 0, 0.5)),
-        url(./img/subbanner-celular.png);
+
+        width: 95%;
+        margin: 7rem auto 6rem;
 
         a {
-            font-size: 2.3rem;
+            font-size: 2.8rem;
             margin: 2.2rem auto 1.8rem;
         }
 
         .clients-pictures {
-            grid-template-columns: 35% 35%;
+            grid-template-columns: 49% 49%;
+            grid-template-rows: 17vh 17vh 17vh;
+            gap: 1rem;
             justify-content: center;
             margin-bottom: 3rem;
 
