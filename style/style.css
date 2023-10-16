@@ -653,17 +653,22 @@ ul {
   text-transform: uppercase;
 }
 .contact .contact-content {
+  height: 60vh;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: row;
 }
 .contact .contact-content .contact-form {
-  padding: 2rem 3rem 4rem;
+  height: 100%;
+  padding: 3rem 3rem 4rem;
   width: 45%;
   border-radius: 2px;
   background-color: #fff;
   box-shadow: 0px 0px 37px -4px rgba(0, 0, 0, 0.24);
+}
+.contact .contact-content .contact-form form {
+  height: 100%;
 }
 .contact .contact-content .contact-form h5 {
   margin: 0;
@@ -679,7 +684,7 @@ ul {
 }
 .contact .contact-content .contact-form div input {
   width: 49%;
-  padding: 1.2rem 2rem;
+  padding: 1.5rem 2rem;
   margin: 0.5rem 0;
   display: inline-block;
   border: none;
@@ -693,6 +698,7 @@ ul {
 }
 .contact .contact-content .contact-form textarea {
   width: 100%;
+  height: calc(100% - 20rem);
   margin: 0.5rem 0 0;
   background-color: #72b8fd;
   border: none;
@@ -714,6 +720,7 @@ ul {
 }
 .contact .contact-content .contact-info {
   width: 45%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   border-radius: 2px;
@@ -723,17 +730,19 @@ ul {
 }
 .contact .contact-content .contact-info #map {
   width: 100%;
-  height: 20rem;
+  height: 45%;
 }
 .contact .contact-content .contact-info .contact-address {
   width: 100%;
   font-size: 1.5rem;
-  padding: 0.4rem 0;
+  padding: 0.8rem 0;
   background-color: #0088ff;
   color: #fff;
   text-align: center;
+  border-radius: 0 0 10px 10px;
 }
 .contact .contact-content .contact-info .contact-numbers {
+  margin-top: 4rem;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -741,7 +750,7 @@ ul {
   text-align: center;
 }
 .contact .contact-content .contact-info .contact-numbers h5 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin: 1rem;
 }
 
@@ -775,12 +784,31 @@ ul {
     width: 48%;
   }
 }
+@media only screen and (max-width: 1280px) {
+  .contact h4 {
+    margin: 1.5rem;
+  }
+  .contact .contact-content .contact-info .contact-numbers {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row;
+    text-align: center;
+  }
+  .contact .contact-content .contact-info .contact-numbers h5 {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+}
 @media only screen and (max-width: 768px) {
   .contact h4 {
+    font-size: 2.8rem;
     margin: 4rem auto 1rem;
   }
   .contact .contact-content {
     flex-direction: column-reverse;
+    height: 100%;
   }
   .contact .contact-content .contact-form {
     width: 100%;
@@ -795,9 +823,16 @@ ul {
   .contact .contact-content .contact-form input[type=submit] {
     width: 100%;
   }
+  .contact .contact-content .contact-form textarea {
+    height: 20rem;
+  }
   .contact .contact-content .contact-info {
     width: 100%;
     margin-bottom: 2rem;
+  }
+  .contact .contact-content .contact-info #map {
+    width: 100%;
+    height: 45vh;
   }
 }
 /** FOOTER **/

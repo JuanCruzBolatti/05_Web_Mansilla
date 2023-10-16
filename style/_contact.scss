@@ -8,17 +8,23 @@
     }
 
     .contact-content {
+        height: 60vh;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
         flex-direction: row;
 
         .contact-form {
-            padding: 2rem 3rem 4rem;
+            height: 100%;
+            padding: 3rem 3rem 4rem;
             width: 45%;
             border-radius: 2px;
             background-color: $color-white;
             box-shadow: 0px 0px 37px -4px rgba(0,0,0,0.24);
+
+            form {
+                height: 100%;
+            }
 
             h5 {
                 margin: 0;
@@ -35,7 +41,7 @@
 
                 input {
                     width: 49%;
-                    padding: 1.2rem 2rem;
+                    padding: 1.5rem 2rem;
                     margin: .5rem 0;
                     display: inline-block;
                     border: none;
@@ -53,6 +59,7 @@
 
             textarea {
                 width: 100%;
+                height: calc(100% - 20rem);
                 margin: .5rem 0 0;
                 background-color: #72b8fd;
                 border: none;
@@ -78,6 +85,7 @@
 
         .contact-info {
             width: 45%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             border-radius: 2px;
@@ -87,19 +95,21 @@
 
             #map {
                 width: 100%;
-                height: 20rem;
+                height: 45%;
             }
 
             .contact-address {
                 width: 100%;
                 font-size: 1.5rem;
-                padding: .4rem 0;
+                padding: .8rem 0;
                 background-color: $color-main;
                 color: $color-white;
                 text-align: center;
+                border-radius: 0 0 10px 10px;
             }
 
             .contact-numbers {
+                margin-top: 4rem;
                 display: flex;
                 justify-content: space-around;
                 align-items: flex-start;
@@ -107,7 +117,7 @@
                 text-align: center;
 
                 h5 {
-                    font-size: 1.8rem;
+                    font-size: 2rem;
                     margin: 1rem;
                 }
             }
@@ -148,14 +158,44 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
     .contact {
         h4 {
+            margin: 1.5rem;
+        }
+
+        .contact-content {
+            .contact-info {
+                .contact-numbers {
+                    margin-top: 1rem;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: flex-start;
+                    flex-direction: row;
+                    text-align: center;
+            
+                    h5 {
+                        font-size: 2rem;
+                        margin: 1rem;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contact {
+
+        h4 {
+            font-size: 2.8rem;
             margin: 4rem auto 1rem;
         }
 
         .contact-content {
             flex-direction: column-reverse;
+            height: 100%;
 
             .contact-form {
                 width: 100%;
@@ -172,10 +212,20 @@
                 input[type=submit] {
                     width: 100%;
                 }
+
+                textarea {
+                    height: 20rem;
+                }
             }
+
             .contact-info {
                 width: 100%;
                 margin-bottom: 2rem;
+
+                #map {
+                    width: 100%;
+                    height: 45vh;
+                }
             }
         }
     }
