@@ -40,26 +40,46 @@
             margin-top: 3rem;
             font-weight: bold;
             line-height: 5rem;
-        }
-
-        .see-more {
-            padding-left: 1rem;
-            position: absolute;
-            margin-top: 2rem;
-
-            &::before {
-                left: 0;
-            }
+            transition: .18s ease-in;
         }
     }
 
     .ha-text {
         width: 47%;
         margin-top: 2rem;
-        font-size: 2.6rem;
-        line-height: 3rem;
-        text-align: justify;
-        text-indent: 2rem;
+
+        p {  
+            font-size: 2.6rem;
+            line-height: 3rem;
+            text-align: justify;
+            text-indent: 2rem;
+        }
+
+        .see-more {
+            color: transparent;
+            float: right;
+            position: relative;
+            margin-top: 3rem;
+            padding-right: 2rem;
+        }
+    }
+
+    &:hover {
+        .ha-text {
+            .see-more {
+                color: $color-white;
+
+                &::before {
+                    clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
+                    width: 15rem;
+                }
+
+                &:hover::before {
+                    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+                    width: 20rem;
+                }
+            }
+        }
     }
 }
 
@@ -67,7 +87,7 @@
     .home-about {
         div {
             .subtitle {
-                font-size: 2.3rem;
+                font-size: 2.5rem;
                 padding-left: 1.6rem;
 
                 &::before {
@@ -78,15 +98,15 @@
             }
             
             .ha-frase {
-                width: 90%;
-                font-size: 3.5rem;
-                line-height: 3.5rem;
+                width: 100%;
+                font-size: 5.2rem;
+                line-height: 5rem;
             }
         }
 
-        .ha-text {
+        .ha-text p {
             margin-top: 0;
-            font-size: 1.8rem;
+            font-size: 2.6rem;
             line-height: 2.4rem;
         }
     }
@@ -109,6 +129,7 @@
         }
     
         .ha-text {
+            text-align: center;
             margin-top: 2rem;
             width: 100%;
             font-size: 2.2rem;

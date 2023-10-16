@@ -98,18 +98,15 @@ ul {
 .see-more::before {
   content: "";
   position: absolute;
-  -webkit-clip-path: polygon(0 0, 94% 0, 75% 100%, 0% 100%);
-          clip-path: polygon(0 0, 94% 0, 75% 100%, 0% 100%);
-  width: 0;
-  height: 1.5rem;
-  left: -1rem;
-  top: 1.6rem;
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+  width: 6rem;
+  height: 6rem;
+  right: 0;
+  bottom: -1.5rem;
   background-color: #0088ff;
   z-index: -1;
   transition: 0.2s ease-in;
-}
-.see-more:hover::before {
-  width: 10rem;
 }
 
 .sub-hero {
@@ -340,7 +337,7 @@ ul {
 }
 .hero h2 {
   color: #fff;
-  font-size: 5.3rem;
+  font-size: 4.8rem;
   font-weight: bold;
   text-transform: uppercase;
   width: 33%;
@@ -386,15 +383,15 @@ ul {
   background-color: #fff;
 }
 .hero:hover > div > h2 {
-  font-size: 5.5rem;
+  font-size: 5.1rem;
 }
 
 @media only screen and (max-width: 1280px) {
   .hero h2 {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
   }
   .hero:hover > div > h2 {
-    font-size: 3.8rem;
+    font-size: 3.4rem;
   }
   .hero p {
     font-size: 1.8rem;
@@ -461,27 +458,42 @@ ul {
   margin-top: 3rem;
   font-weight: bold;
   line-height: 5rem;
-}
-.home-about div .see-more {
-  padding-left: 1rem;
-  position: absolute;
-  margin-top: 2rem;
-}
-.home-about div .see-more::before {
-  left: 0;
+  transition: 0.18s ease-in;
 }
 .home-about .ha-text {
   width: 47%;
   margin-top: 2rem;
+}
+.home-about .ha-text p {
   font-size: 2.6rem;
   line-height: 3rem;
   text-align: justify;
   text-indent: 2rem;
 }
+.home-about .ha-text .see-more {
+  color: transparent;
+  float: right;
+  position: relative;
+  margin-top: 3rem;
+  padding-right: 2rem;
+}
+.home-about:hover .ha-text .see-more {
+  color: #fff;
+}
+.home-about:hover .ha-text .see-more::before {
+  -webkit-clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(45% 0, 100% 0, 100% 100%, 0% 100%);
+  width: 15rem;
+}
+.home-about:hover .ha-text .see-more:hover::before {
+  -webkit-clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+  width: 20rem;
+}
 
 @media only screen and (max-width: 1280px) {
   .home-about div .subtitle {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
     padding-left: 1.6rem;
   }
   .home-about div .subtitle::before {
@@ -490,13 +502,13 @@ ul {
     top: -1.4rem;
   }
   .home-about div .ha-frase {
-    width: 90%;
-    font-size: 3.5rem;
-    line-height: 3.5rem;
+    width: 100%;
+    font-size: 5.2rem;
+    line-height: 5rem;
   }
-  .home-about .ha-text {
+  .home-about .ha-text p {
     margin-top: 0;
-    font-size: 1.8rem;
+    font-size: 2.6rem;
     line-height: 2.4rem;
   }
 }
@@ -515,6 +527,7 @@ ul {
     margin-top: 4rem;
   }
   .home-about .ha-text {
+    text-align: center;
     margin-top: 2rem;
     width: 100%;
     font-size: 2.2rem;
@@ -528,13 +541,8 @@ ul {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(to top, rgba(30, 30, 30, 0.05), rgba(0, 0, 0, 0.5)), url(./img/subbanner.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 .home-clients a {
-  color: #fff;
   text-align: center;
   font-size: 4rem;
   text-transform: uppercase;
@@ -543,12 +551,12 @@ ul {
 }
 .home-clients .clients-pictures {
   display: grid;
-  grid-template-columns: 8.6vw 8.6vw 8.6vw 26.875vw;
-  gap: 0.4rem;
+  grid-template-columns: 15vw 15vw 15vw;
+  gap: 3rem;
   margin-bottom: 5rem;
 }
 .home-clients .clients-pictures div {
-  background-color: #fff;
+  background-color: #000;
   aspect-ratio: 1;
   display: flex;
   align-items: center;
