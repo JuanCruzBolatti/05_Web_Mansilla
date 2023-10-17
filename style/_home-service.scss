@@ -1,12 +1,12 @@
 .services {
     margin-top: 8rem;
-    height: 50vh;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 
-    a {
+    a:nth-child(1) {
         font-size: 4rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -20,30 +20,124 @@
         justify-content: space-between;
         gap: 4rem;
 
-        div {
+        .services-card {
             height: 100%;
-            padding: 6rem;
-            background-color: rebeccapurple;
+            padding: 6rem 6rem 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-direction: column;
+            transition: .2s ease;
+            position: relative;
 
             img {
-                width: 40%;
-                background-color: red;
+                width: 50%;
+                transition: .2s ease;
             }
 
-            p {
-                text-align: center;
-                font-size: 2rem;
-                margin: 0;
+            .services-text {
+                p {
+                    text-align: center;
+                    font-size: 2rem;
+                    line-height: 2rem;
+                    margin: 0;
+                }
+    
+                p:nth-child(1) {
+                    font-size: 3rem;
+                    line-height: 2.8rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    margin-bottom: 1rem;
+                }
             }
 
-            .services-card-title {
-                font-size: 3rem;
-                font-weight: bold;
-                text-transform: uppercase;
+            .see-more {
+                color: transparent;
+                position: relative;
+                float: right;
+                margin-top: 1.5rem;
+
+                &::before {
+                    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+                    width: 0;
+                    height: 4rem;
+                    right: -1rem;
+                    bottom: -0.5rem;
+                  }
+            }
+
+            &:hover {
+
+                img {
+                    background-color: rebeccapurple;
+                }
+
+                .see-more {
+                    color: #fff;
+
+                    &::before {
+                        width: 12rem;
+                    }
+
+                    &:hover::before {
+                        clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+                        width: 20rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .services {
+        .services-content {
+            margin-top: 3rem;
+
+            .services-card {
+                padding: 2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .services {
+        height: 70vh;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .services {
+        height: 100%;
+        margin-top: 4rem;
+
+        a:nth-child(1) {
+            font-size: 2.8rem;
+        }
+
+        .services-content {
+            flex-direction: column;
+
+            .services-card {
+                height: 35vh;
+
+                img {
+                    width: 35%;
+                }
+
+                .services-text {
+                    p {
+                        margin: 0 auto;
+                        width: 60%;
+                    }
+
+                    p:nth-child(1) {
+                        font-size: 2.3rem;
+                        width: 80%;
+                    }
+                }
             }
         }
     }

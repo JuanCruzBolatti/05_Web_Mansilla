@@ -68,7 +68,7 @@ ul {
   margin: 0 auto;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1240px) {
   .container {
     max-width: 90%;
   }
@@ -540,13 +540,13 @@ ul {
 /** SERVICE SECTION **/
 .services {
   margin-top: 8rem;
-  height: 50vh;
+  height: 45vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-.services a {
+.services a:nth-child(1) {
   font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -559,30 +559,101 @@ ul {
   justify-content: space-between;
   gap: 4rem;
 }
-.services .services-content div {
+.services .services-content .services-card {
   height: 100%;
-  padding: 6rem;
-  background-color: rebeccapurple;
+  padding: 6rem 6rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  transition: 0.2s ease;
+  position: relative;
 }
-.services .services-content div img {
-  width: 40%;
-  background-color: red;
+.services .services-content .services-card img {
+  width: 50%;
+  transition: 0.2s ease;
 }
-.services .services-content div p {
+.services .services-content .services-card .services-text p {
   text-align: center;
   font-size: 2rem;
+  line-height: 2rem;
   margin: 0;
 }
-.services .services-content div .services-card-title {
+.services .services-content .services-card .services-text p:nth-child(1) {
   font-size: 3rem;
+  line-height: 2.8rem;
   font-weight: bold;
   text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.services .services-content .services-card .see-more {
+  color: transparent;
+  position: relative;
+  float: right;
+  margin-top: 1.5rem;
+}
+.services .services-content .services-card .see-more::before {
+  -webkit-clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+  width: 0;
+  height: 4rem;
+  right: -1rem;
+  bottom: -0.5rem;
+}
+.services .services-content .services-card:hover img {
+  background-color: rebeccapurple;
+}
+.services .services-content .services-card:hover .see-more {
+  color: #fff;
+}
+.services .services-content .services-card:hover .see-more::before {
+  width: 12rem;
+}
+.services .services-content .services-card:hover .see-more:hover::before {
+  -webkit-clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+  width: 20rem;
 }
 
+@media only screen and (max-width: 1440px) {
+  .services .services-content {
+    margin-top: 3rem;
+  }
+  .services .services-content .services-card {
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .services {
+    height: 70vh;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .services {
+    height: 100%;
+    margin-top: 4rem;
+  }
+  .services a:nth-child(1) {
+    font-size: 2.8rem;
+  }
+  .services .services-content {
+    flex-direction: column;
+  }
+  .services .services-content .services-card {
+    height: 35vh;
+  }
+  .services .services-content .services-card img {
+    width: 35%;
+  }
+  .services .services-content .services-card .services-text p {
+    margin: 0 auto;
+    width: 60%;
+  }
+  .services .services-content .services-card .services-text p:nth-child(1) {
+    font-size: 2.3rem;
+    width: 80%;
+  }
+}
 /** CLIENT SECTION **/
 .home-clients {
   margin-top: 7rem;
@@ -601,7 +672,7 @@ ul {
 }
 .home-clients .clients-pictures {
   display: grid;
-  grid-template-columns: 22vw 22vw 22vw;
+  grid-template-columns: auto auto auto;
   grid-template-rows: 13vw 13vw;
   gap: 3rem;
   margin-bottom: 5rem;
@@ -649,8 +720,8 @@ ul {
 }
 
 @media only screen and (max-width: 1280px) {
-  .home-clients a {
-    font-size: 3rem;
+  .home-clients {
+    margin-top: 2rem;
   }
   .home-clients .clients-pictures .clients-pictures-text p {
     font-size: 1.6rem;
@@ -659,7 +730,7 @@ ul {
 @media only screen and (max-width: 768px) {
   .home-clients {
     width: 95%;
-    margin: 7rem auto 6rem;
+    margin: 2rem auto 0;
   }
   .home-clients a {
     font-size: 2.8rem;
