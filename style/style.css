@@ -1013,6 +1013,118 @@ footer {
     width: 100%;
   }
 }
+/** SERVICE PAGE **/
+/* Service Hero */
+.service-hero {
+  background-image: url(./img/Banner.png);
+  background-position: center;
+  background-size: 100%;
+  margin-top: 6.8vh;
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.service-hero img {
+  width: 10%;
+}
+.service-hero h1 {
+  color: #fff;
+  width: 30%;
+  text-transform: uppercase;
+  line-height: 4.8rem;
+  font-size: 4.5rem;
+}
+
+@media only screen and (max-width: 1280px) {
+  .service-hero h1 {
+    width: 40%;
+    line-height: 3.8rem;
+    font-size: 4.1rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .service-hero {
+    flex-direction: column;
+  }
+  .service-hero img {
+    margin-top: 3rem;
+    width: 30%;
+  }
+  .service-hero h1 {
+    width: 100%;
+    font-size: 3rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+}
+/* Service Cards */
+.service-cards {
+  background-color: rebeccapurple;
+  margin-top: 6vh;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.service-cards .service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.service-cards .service-card p {
+  font-size: 3rem;
+  text-align: center;
+  color: transparent;
+  margin: 12vh 4rem;
+  z-index: 1;
+  transition: 0.18s ease-in;
+}
+.service-cards .service-card p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #0088ff;
+  width: 100%;
+  height: 9.5%;
+  z-index: -1;
+  transition: 0.18s ease-in;
+}
+.service-cards .service-card a {
+  color: transparent;
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0;
+  z-index: 1;
+  transition: 0.18s ease-in;
+}
+.service-cards .service-card:hover p {
+  color: #fff;
+}
+.service-cards .service-card:hover p::before {
+  height: 100%;
+}
+.service-cards .service-card:hover a {
+  background-color: #ffffff;
+  color: #0088ff;
+}
+
+@media only screen and (max-width: 768px) {
+  .service-cards {
+    grid-template-columns: auto;
+  }
+  .service-cards .service-card p::before {
+    width: 9.5%;
+    height: 100%;
+  }
+  .service-cards .service-card:hover p::before {
+    width: 100%;
+    height: 100%;
+  }
+}
 /** ABOUT PAGE **/
 .home-about-reverse {
   flex-direction: row-reverse;
