@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafica y Flexibles</title>
+    <!-- LeafletJS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="" />
+    <!-- Normalize -->
+    <link rel="stylesheet" href="style/normalize.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <!-- Sidebar -->
+            <div class="sidebar" style="display: none;" id="sidebar">
+                <div class="sidebar-anchors">
+                    <a href="/servicios.html">Servicios</a>
+                    <a href="/nosotros.html">Sobre Nosotros</a>
+                    <a href="/nosotros.html#nuestros-clientes">Clientes</a>
+                    <a href="/contacto.html">Contactanos</a>
+                </div>
+                <div class="sidebar-info">
+                    <p>Opcion de texto personalizado para la utilizacion de opciones de contacto, o informacion adicional. Ya sea como llegar al lugar o numeros de telefono u horarios de atencion.</p>
+                </div>   
+            </div>
+
+            <!-- Navbar -->
+            <div class="navbar container">
+                <a href="/" class="logo">GyF</a>
+                <nav class="navbar-anchors display-pc">
+                    <a href="/servicios.html">Servicios</a>
+                    <a href="/nosotros.html">Sobre Nosotros</a>
+                    <a href="/nosotros.html#nuestros-clientes">Clientes</a>
+                    <a href="/contacto.html">Contactanos</a>
+                </nav>
+
+                <div class="display-mobile bars" onclick="changeBars(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-border"></div>
+    </header>
+
+    <div class="hero sub-hero">
+        <div class="container">
+            <h2>Sobre Nosotros</h2>
+        </div>
+    </div>
+
+    <section class="container about">
+        <h3>Nuestra Historia</h3>
+    </section>
+
+    <section class="container clients">
+        <h3>Nuestros Clientes</h3>
+    </section>
+
+    <footer>
+        <div class="footer container">
+            <div>
+                <a href="/nosotros.html" class="footer-title">Gráfica Y Flexibles SRL</a>
+                <p>Con más de 40 años en la industria gráfica argentina, forjamos excelencia y creatividad en cada proyecto. Colaboramos con marcas destacadas, transformando conceptos en impactantes realidades visuales. Nuestra pasión se refleja en cada detalle, reafirmando nuestro compromiso con soluciones gráficas excepcionales.</p>
+            </div>
+            <div>
+                <a href="/servicios.html" class="footer-title">Servicios</a>
+                <a href="/servicios.html">Grafica</a>
+                <a href="/servicios.html">Flexibles</a>
+            </div>
+            <div>
+                <a href="/contacto.html" class="footer-title">Contacto</a>
+                <a href="/contacto.html">Mail</a>
+                <a href="/contacto.html">Telefono</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LeafletJS -->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -115,6 +115,19 @@ ul {
 
 .sub-hero {
   height: calc(30vh - 6.8vh)!important;
+  
+  h2 {
+    width: 50%!important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .sub-hero {
+    h2 {
+      font-size: 3rem!important;
+      width: 90%!important;
+    }
+  }
 }
 
 /** HEADER **/

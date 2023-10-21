@@ -1,3 +1,17 @@
+.contact-frase {
+    color: #2a2a2a;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 3rem;
+    transition: .2s ease-in-out;
+
+    &:hover {
+        color: $color-main;
+    }
+}
+
 .contact {
     margin-bottom: 5rem;
 
@@ -18,7 +32,6 @@
             height: 100%;
             padding: 3rem 3rem 4rem;
             width: 45%;
-            border-radius: 2px;
             background-color: $color-white;
             box-shadow: 0px 0px 37px -4px rgba(0,0,0,0.24);
 
@@ -45,7 +58,6 @@
                     margin: .5rem 0;
                     display: inline-block;
                     border: none;
-                    border-radius: 5px;
                 }
 
                 input[type=text] {
@@ -63,7 +75,6 @@
                 margin: .5rem 0 0;
                 background-color: #72b8fd;
                 border: none;
-                border-radius: 5px;
             }
 
             input[type=submit] {
@@ -72,7 +83,6 @@
                 padding: 1.2rem 2rem;
                 display: inline-block;
                 border: none;
-                border-radius: 5px;
                 cursor: pointer;
                 background-color: $color-main;
                 color: $color-white;
@@ -88,7 +98,6 @@
             height: 100%;
             display: flex;
             flex-direction: column;
-            border-radius: 2px;
             background-color: $color-white;
             box-shadow: 0px 0px 37px -4px rgba(0,0,0,0.24);
             z-index: 1;
@@ -105,7 +114,6 @@
                 background-color: $color-main;
                 color: $color-white;
                 text-align: center;
-                border-radius: 0 0 10px 10px;
             }
 
             .contact-numbers {
@@ -138,54 +146,26 @@
     color: #01264a;
 }
 
-@media only screen and (max-width: 1440px) {
-    .contact {
-        .contact-content {
-            .contact-form {
-                width: 48%;
-
-                div {
-                    input {
-                        font-size: 1.4rem;
-                        padding-left: 1rem;
-                    }
-                }
-            }
-            .contact-info {
-                width: 48%;
-            }
-        }
-    }
-}
-
 @media only screen and (max-width: 1280px) {
-    .contact {
-        h4 {
-            margin: 1.5rem;
-        }
+    .contact-frase {
+        font-size: 3rem;
+        margin: 2rem;
+    }
 
+    .contact {
         .contact-content {
-            .contact-info {
-                .contact-numbers {
-                    margin-top: 1rem;
-                    display: flex;
-                    justify-content: space-around;
-                    align-items: flex-start;
-                    flex-direction: row;
-                    text-align: center;
-            
-                    h5 {
-                        font-size: 2rem;
-                        margin: 1rem;
-                    }
-                }
-            }
-            
+            height: 80vh;
         }
     }
 }
+
 
 @media only screen and (max-width: 768px) {
+    .contact-frase {
+        font-size: 2.5rem;
+        margin: 2rem;
+    }
+    
     .contact {
 
         h4 {
