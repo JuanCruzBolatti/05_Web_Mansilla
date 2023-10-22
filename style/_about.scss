@@ -1,0 +1,169 @@
+.about {
+    margin: 6rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 53vh;
+
+    .about-text {
+        width: 48%;
+
+
+        h3 {
+            color: #2e2e2e;
+            font-size: 4rem;
+            text-transform: uppercase;
+            margin: 0;
+            transition: 0.18s ease-in-out;
+        }
+
+        p {
+            font-size: 2.6rem;
+            line-height: 3rem;
+            text-align: justify;
+            text-indent: 2rem;
+            margin-bottom: 6rem;
+        }
+
+        a {
+            font-weight: bold;
+            color: #fff;
+            position: relative;
+            padding-left: 2rem;
+
+            &:hover {
+                &::before {
+                    background-color: #000;
+                }
+
+                &::after {
+                    width: 7rem;
+                }
+            }
+
+            &::before {
+                clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+                left: 0;
+                bottom: -2rem;
+                width: 20rem;
+            }
+
+            &::after {
+                content: "";
+                color: #000;
+                position: absolute;
+                width: 0;
+                height: calc(6rem - 1px);
+                left: 13rem;
+                bottom: calc(-2rem + 1px);
+                border: 2px solid #000;
+                z-index: -3;
+                transition: 0.18s ease-in;
+            }
+        }
+    }
+
+    .about-image {
+        background: linear-gradient(to top, rgba(30, 30, 30, 0.05), rgba(0, 0, 0, 0.5)),
+        url(./img/Banner.png);
+        height: 100%;
+        width: 48%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            clip-path: polygon(100% 0, 100% 0, 100% 100%, 0% 100%);
+            width: 18rem;
+            height: 18rem;
+            right: 0rem;
+            bottom: 0rem;
+            background-color: $color-main;
+            z-index: 1;
+            transition: .2s ease-in;
+        }
+    }
+
+    &:hover {
+        .about-text {
+            h3 {
+                color: #000;
+            }
+        }
+
+        .about-image {
+            &::after {
+                right: -1rem;
+                bottom: -1rem;
+            }
+
+            &:hover {
+                &::after {
+                    background-color: #000000ef;
+                    right: -3rem;
+                    bottom: -3rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .about {
+        margin-top: 4rem;
+        height: 75vh;
+
+        .about-text {
+            h3 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 2.2rem;
+                margin-bottom: 4.2rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about {
+        margin-top: 2rem;
+        flex-direction: column-reverse;
+        height: 100%;
+
+        .about-text {
+            margin-top: 3rem;
+            width: 100%;
+
+            h3 {
+                text-align: center;
+            }
+        }
+
+        .about-image {
+            overflow: hidden;
+            width: 100%;
+            height: 50vh;
+        }
+    }
+}
+
+.clients {
+    .clients-pictures {
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 10vw 10vw 10vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .clients {
+        .clients-pictures {
+            grid-template-columns: 32% 32% 32%;
+            grid-template-rows: 10vh 10vh 10vh;
+        }
+    }
+}
