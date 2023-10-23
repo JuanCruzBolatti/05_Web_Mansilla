@@ -53,24 +53,30 @@
 
 /* Service Cards */
 .service-cards {
-    background-color: rebeccapurple;
-
     margin-top: 6vh;
     margin-bottom: 1rem;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 43.3vh;
 
     .service-card {
+        background: linear-gradient(to top, rgba(30, 30, 30, 0.05), rgba(0, 0, 0, 0.5)), 
+        url(./img/Banner.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
         display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
+        height: 100%;
 
         p {
             font-size: 3rem;
             text-align: center;
             color: transparent;
             margin: 12vh 4rem;
+            margin-bottom: auto;
             z-index: 1;
             transition: .18s ease-in;
 
@@ -114,12 +120,27 @@
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1280px) {
     .service-cards {
-        grid-template-columns: auto;
+        height: 55vh;
 
         .service-card {
             p {
+                font-size: 2.8rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .service-cards {
+        height: auto;
+        grid-template-columns: auto;
+
+        .service-card {
+            height: 50vh;
+            p {
+                margin: auto 4rem;
                 &::before {
                     width: 9.5%;
                     height: 100%;
