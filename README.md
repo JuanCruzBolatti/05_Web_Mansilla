@@ -1,4 +1,4 @@
-# Web_Mansilla
+# Web // Mansilla
 
 ###### English
 Website developed mainly with html and scss, and to a lesser extent js, for general use.
